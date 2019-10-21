@@ -51,7 +51,7 @@ Your code for generating your project:
 
 ## Results
 
-- HTML page (host locally) with results: https://github.com/ucsd-ml-arts/generative-text-parker/blob/master/index.html, compare to [original](https://drive.google.com/open?id=177hWtGZio96_AQ1mnvBalR3R-nyEq-Nsh7lUBA_hpXA)
+- HTML page with results: https://ucsd-ml-arts.github.io/generative-text-parker/, compare to [original](https://drive.google.com/open?id=177hWtGZio96_AQ1mnvBalR3R-nyEq-Nsh7lUBA_hpXA)
 
 ## Technical Notes
 
