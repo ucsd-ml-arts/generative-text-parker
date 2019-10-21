@@ -317,19 +317,12 @@ for (generation of generations) {
         select.innerHTML += `<option>${choice}</option>`
     }
 
-    // let selected = select.options[select.selectedIndex].text;
-
     span.innerHTML = generation.choices[0];
+    
+    select.addEventListener("click", function() {
+        span.innerHTML = select.options[select.selectedIndex].text;
+    });
 
-    // span.innerHTML = selected;
-
-    // generation.innerHtml = ```<div c
-
-
-
-    // generation.onclick = function() {
-
-    // }
 }
 
 
