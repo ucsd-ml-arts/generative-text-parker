@@ -59,6 +59,7 @@ Any implementation details or notes we need to repeat your work.
 - Uses [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple) for simple finetuning and generating using GPT-2
 - Note that each model is about 500MB... and that to verbosify a piece of writing the way described above you'll need to train almost as many checkpoints as there are sentences... so make sure to delete these checkpoints once you're done generating for a given passage
 - gpt-2-simple has a hardcoded training data sample size of 1024 tokens.  We want to finetune on a single passage... which is no where near that many words.  So, I simply duplicated the passage until its file reached or exceeded 1024 words.  Is this the best way to accomplish this?  Maybe not, but I had a hard time editing the source code without causing errors, so we honestly can't say whether my method was better or worse than adjusting the training data sample size!
+- Note that datahub can usually finetune without issue, but sometimes the instance runs out of VRAM.  In that case just use JupyterHub and request a 1080Ti or another card with greater than 8GB of VRAM
 
 ## Reference
 
