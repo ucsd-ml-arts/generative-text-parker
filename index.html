@@ -320,6 +320,10 @@ for (generation of generations) {
     span.innerHTML = generation.choices[0];
     
     select.addEventListener("click", function() {
+        
+        span = this.querySelector("span");
+        select = this.querySelector("select");
+        
         span.innerHTML = select.options[select.selectedIndex].text;
     });
 
