@@ -9,7 +9,7 @@ Artistically, the input of my project is a high school essay I wrote on Artifici
 I used (rather, abused) OpenAI's GPT-2 model to accomplish my goals.  I wanted to purposefully misuse parts of the model in order to put an end to GPT-2's creativity, and to produce something in stark contrast to the text-summarative capabilities that GPT-2 has been cited for.  This involved a large amount of experimentation with different generation parameters such as `temperature` and `top_k`, as well as exploration of the use and over-use of finetuning.
 
 I tried different methods of finetuning with the following findings:
-1. Finetuning on a large corpus of academic writing, magazine writing, and newspaper writing (medium amount of epochs, ~500)
+1. Finetuning on a [large corpus of academic writing, magazine writing, and newspaper writing](https://www.english-corpora.org/coca/) (medium amount of epochs, ~500)
    - The model had a strong desire to talk about topics mentioned in this corpus—did not stay on topic to the prompt
 2. Finetuning on the essay that I wanted to verbosify (small amount of epochs, ~1–5)
    - The model generally stayed on topic, but the specific subject discussed still had decent variability
