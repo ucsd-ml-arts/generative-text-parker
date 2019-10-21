@@ -4,8 +4,6 @@ Parker Addison, pgaddiso@ucsd.edu
 
 ## Abstract
 
-*Include your abstract here. This should be one paragraph clearly describing your concept, method, and results. This should tell us what architecture/approach you used. Also describe your creative goals, and whether you were successful in achieving them. Also could describe future directions.*
-
 Artistically, the input of my project is a high school essay I wrote on Artificial Intelligence in Space Rovers, and the output is the same high school essay with roughly twice the word count.  What I'm creating is a highschooler's dream, and a statement to the needless verbosity and meaningless clutter that high word counts encourage.
 
 I used (rather, abused) OpenAI's GPT-2 model to accomplish my goals.  I wanted to purposefully misuse parts of the model in order to put an end to GPT-2's creativity, and to produce something in stark contrast to the text-summarative capabilities that GPT-2 has been cited for.  This involved a large amount of experimentation with different generation parameters such as `temperature` and `top_k`, as well as exploration of the use and over-use of finetuning.
@@ -43,29 +41,27 @@ Overall, this was a time consuming process when done on an entire essay, but I c
 ## Model/Data
 
 Briefly describe the files that are included with your repository:
-- trained models
-- training data (or link to training data). what is your corpus?
+- Training data, complete essay: https://github.com/ucsd-ml-arts/generative-text-parker/blob/master/text/rovers.txt, passages: https://github.com/ucsd-ml-arts/generative-text-parker/tree/master/text/passages
+- Checkpoint for 124M model finetuned on `passage0.txt`: **file too large for GitHub without LFS.  The model trains quickly, so just do that instead!**
 
 ## Code
 
 Your code for generating your project:
-- training_code.py or training_code.ipynb - your training code
-- generative_code.py or generative_code.ipynb - your generation code
+- Training and generating: https://github.com/ucsd-ml-arts/generative-text-parker/blob/master/Project1.ipynb
 
 ## Results
 
-- Documentation of your generative text in an effective form. A file with your generated text (.pdf, .doc, .txt). 
+- HTML page (host locally) with results: https://github.com/ucsd-ml-arts/generative-text-parker/blob/master/index.html, compare to [original](https://drive.google.com/open?id=177hWtGZio96_AQ1mnvBalR3R-nyEq-Nsh7lUBA_hpXA)
 
 ## Technical Notes
 
 Any implementation details or notes we need to repeat your work. 
-- Does this code require other pip packages, software, etc?
-- Does it run on some other (non-datahub) platform? (CoLab, etc.)
+- Uses [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple) for simple finetuning and generating using GPT-2
+- Note that each model is about 500MB... and that to verbosify a piece of writing the way described above you'll need to train almost as many checkpoints as there are sentences... so make sure to delete these checkpoints once you're done generating for a given passage
+- gpt-2-simple has a hardcoded training data sample size of 1024 tokens.  We want to finetune on a single passage... which is no where near that many words.  So, I simply duplicated the passage until its file reached or exceeded 1024 words.  Is this the best way to accomplish this?  Maybe not, but I had a hard time editing the source code without causing errors, so we honestly can't say whether my method was better or worse than adjusting the training data sample size!
 
 ## Reference
 
 References to any papers, techniques, repositories you used:
-- Papers
-  - [This is a paper](this_is_the_link.pdf)
-- Repositories
-- Blog posts
+- [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple)
+- [gpt-2-simple's Issues page](https://github.com/minimaxir/gpt-2-simple/issues)
