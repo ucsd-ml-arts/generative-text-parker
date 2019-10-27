@@ -281,55 +281,8 @@ let passages = {
     ]
 };
 
-let presets = {
-    "default": Array(40).fill(0),
-    "alternative": [
-        2,
-        1,
-        3,
-        2,
-        2,
-        -1,
-        1,
-        2,
-        2,
-        2,
-        11,
-        11,
-        12,
-        11,
-        11,
-        10,
-        12,
-        11,
-        11,
-        12,
-        22,
-        21,
-        22,
-        20,
-        22,
-        20,
-        20,
-        23,
-        21,
-        20,
-        32,
-        31,
-        31,
-        30,
-        30,
-        32,
-        32,
-        32,
-        31,
-        31,
-        42
-    ]
-};
 
 for (let i = 0; i < elements.length; i++) {
-    console.log(i);
 
     let element = elements[i];
     let generation = passages.generations[i]
@@ -359,4 +312,71 @@ for (let i = 0; i < elements.length; i++) {
         span.innerHTML = select.options[select.selectedIndex].text;
     });
 
+}
+
+let presetButtons = document.querySelectorAll("button")
+
+let presets = {
+    "0": Array(40).fill(0),
+    "1": [
+        2,
+        1,
+        3,
+        2,
+        2,
+        -1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        3,
+        1,
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2
+    ]
+};
+
+for (let i = 0; i < presetButtons.length; i++) {
+    presetButtons[i].addEventListener("click", function () {
+        selected = presets[`${i}`];
+
+        for (let j = 0; j < elements.length; j++) {
+
+            let element = elements[j];
+            let generation = passages.generations[j]
+
+            span = element.querySelector("span");
+            select = element.querySelector("select");
+
+            span.innerHTML = generation.choices[presets[i][j]];
+        }
+
+    });
 }
