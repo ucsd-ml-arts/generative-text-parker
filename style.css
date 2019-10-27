@@ -1,0 +1,84 @@
+:root {
+    --light-grey: #aaa;
+    --dark-grey: #333;
+    --text-color: #111;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+
+    padding: 1em;
+    
+    text-align: justify;
+    
+    color: var(--text-color);
+    background-color: #eee;
+}
+
+.content {
+    max-width: 52em;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--light-grey);
+}
+
+a:hover,
+a:focus {
+    opacity: 0.6;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+.math {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.divider {
+    height: 4em;
+}
+
+.page {
+    max-width: 52em;
+    background-color: #f8f8f8;
+    padding: 3em;
+}
+
+h3 {
+    text-align: center;
+}
+
+.generated-text {
+    font-family: Consolas;
+    color: var(--dark-grey);
+    font-weight: bold;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+select {
+    position: relative;
+    width: 1.2em;
+    opacity: 0;
+}
+
+.dropdown::after {
+    content: "\25BC";
+    color: var(--dark-grey);
+    position: absolute;
+    left: 0.6em;
+    bottom: 0.5em;
+    pointer-events: none;
+    font-size: 0.5em;
+}
