@@ -30,6 +30,7 @@ html, body {
 @media (min-width: 768px) {
     body {
         text-align: justify;
+        overflow-x: visible;
     }
 }
 
