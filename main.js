@@ -290,11 +290,6 @@ for (let i = 0; i < elements.length; i++) {
     span = element.querySelector("span");
     select = element.querySelector("select");
 
-    // If there aren't any generated choices, hide the element
-    if (generation.choices.length == 0) {
-        element.style.display = "none";
-    }
-
     // Add a dropdown option for each generated choice
     for (choice of generation.choices) {
         select.innerHTML += `<option>${choice}</option>`
@@ -363,7 +358,7 @@ let presets = {
     ]
 };
 
-for (let i = 0; i < presetButtons.length; i++) {
+for (let i = 0; i < presetButtons.length - 1; i++) {
     presetButtons[i].addEventListener("click", function () {
         selected = presets[`${i}`];
 
@@ -372,11 +367,24 @@ for (let i = 0; i < presetButtons.length; i++) {
             let element = elements[j];
             let generation = passages.generations[j]
 
+            element.classList.remove("hidden");
+
             span = element.querySelector("span");
             select = element.querySelector("select");
 
             span.innerHTML = generation.choices[presets[i][j]];
+            select.selectedIndex = presets[i][j]
         }
 
     });
 }
+
+presetButtons[presetButtons.length - 1].addEventListener("click", function () {
+
+    for (let i = 0; i < elements.length; i++) {
+
+        let element = elements[i];
+
+        element.classList.toggle("hidden");
+    }
+});

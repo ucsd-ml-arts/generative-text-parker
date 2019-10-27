@@ -10,31 +10,52 @@
     --sans-serif: 'IBM Plex Sans', sans-serif;
     --serif: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --monospace: Consolas, Menlo, monospace;
+    --side-padding: 0.5rem;
 }
 
 html, body {
     font-family: var(--serif);
     font-size: 20px;
     line-height: 1.3;
-    padding: 0;
     margin: 0;
-    text-align: justify;
     color: var(--text-color);
     background-color: var(--off-white);
     position: relative;
     transition: all 0.3s;
 }
 
+@media (min-width: 768px) {
+    body {
+        text-align: justify;
+    }
+}
+
 .header {
     background-color: var(--slate-grey);
-    height: 60vh;
+    background-image: url(nicolas-lobos.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 100vh;
 }
 
 .title {
-    padding: 4em;
-    position: absolute;
-    top: calc(25vh - 4em);
-    color: var(--mars-red);
+    font-size: 1.2em;
+    padding: 0.5em;
+    padding-top: 40%;
+    padding-bottom: 40%;
+    /* color: var(--mars-red); */
+    color: var(--white);
+}
+
+/* .title >* {
+    background-color: var(--slate-grey);
+    padding: 0.2em;
+} */
+
+@media (min-width: 768px) {
+    .title {
+        padding: 4em;
+    }
 }
 
 .title .main {
@@ -65,8 +86,15 @@ a:hover, a:focus {
 }
 
 .content {
+    padding: var(--side-padding);
     max-width: 52em;
     margin: auto;
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding: 0;
+    }
 }
 
 .math {
@@ -95,17 +123,31 @@ blockquote .output {
 
 .paper {
     display: grid;
-    grid-template-columns: 70% 1fr;
-    grid-template-rows: 20em 1fr;
-    gap: 1em;
-    height: min-content;
-    margin: 2em;
+    grid-template-rows: auto 1fr;
+}
+
+@media (min-width: 768px) {
+    .paper {
+        display: grid;
+        grid-template-columns: 70% 1fr;
+        grid-template-rows: 20em 1fr;
+        gap: 1em;
+        height: min-content;
+        margin: 2em;
+    }
 }
 
 .menu {
-    position: sticky;
-    top: 10em;
     font-family: var(--sans-serif);
+    padding: var(--side-padding);
+    grid-row: 1;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        position: sticky;
+        top: 10em;
+    }
 }
 
 .menu .button {
@@ -113,30 +155,38 @@ blockquote .output {
 }
 
 .menu button {
-    display: inline;
+    display: inline-block;
     position: relative;
     font-size: 1em;
     font-family: var(--monospace);
     color: var(--white);
     padding: 0.4em;
-    margin: 1em 0;
+    margin: 1em 0.5em;
     border: none;
     border-radius: 5em;
     background-color: var(--accent-red);
+    width: 6em;
+    transition: all 0.3s;
 }
 
-.menu button:hover,
-.menu button:focus {
-    top: -3px;
+.menu button:hover, .menu button:focus {
     cursor: pointer;
+    background-color: var(--mars-red);
 }
 
 .page {
     font-size: 18px;
     background-color: var(--white);
-    padding: 3em;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    padding: var(--side-padding);
+    grid-row: 2;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 3em;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 }
 
 h3 {
@@ -148,6 +198,10 @@ h3 {
     color: var(--dark-grey);
     font-weight: bold;
     font-size: 0.95em;
+}
+
+.hidden {
+    display: none;
 }
 
 .dropdown {
@@ -173,4 +227,37 @@ select {
 
 h2 {
     font-family: var(--sans-serif);
+}
+
+ol {
+    list-style: none;
+    counter-reset: custom-counter;
+    padding: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+ol >li {
+    counter-increment: custom-counter;
+}
+
+ol >li::before {
+    content: counter(custom-counter) ". ";
+    font-weight: bold;
+    color: var(--light-grey);
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--sans-serif);
+    color: var(--light-grey);
+    padding: 8em 0;
+}
+
+.footer a {
+    color: var(--light-grey);
+    border: none;
 }
