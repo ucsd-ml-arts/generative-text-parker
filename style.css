@@ -4,11 +4,11 @@
     --light-grey: #aaa;
     --dark-grey: #333;
     --text-color: #111;
-    --mars-red: #EC5741;
+    --mars-red: rgb(197, 73, 54);
     --accent-red: #ff6961;
     --slate-grey: #404452;
-    --sans-serif: 'IBM Plex Sans', sans-serif;
-    --serif: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --sans-serif: "IBM Plex Sans", sans-serif;
+    --serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
     --monospace: Consolas, Menlo, monospace;
     --side-padding: 0.5rem;
 }
@@ -90,16 +90,36 @@ a:hover, a:focus {
     opacity: 0.6;
 }
 
+code {
+    font-family: var(--monospace);
+    font-size: 0.95em;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 52em) 1fr;
+    padding-top: 1em;
+}
+
 .content {
     padding: var(--side-padding);
-    max-width: 52em;
-    margin: auto;
+    grid-column: 2;
 }
 
 @media (min-width: 768px) {
     .content {
         padding: 0;
     }
+}
+
+.bg-slate {
+    background-color: var(--slate-grey);
+    color: var(--off-white);
+}
+
+.bg-mars {
+    background-color: var(--mars-red);
+    color: var(--white);
 }
 
 .math {
@@ -147,19 +167,19 @@ blockquote .output {
         height: min-content;
         margin: 2em;
     }
-    .paper > *:nth-child(1) {
+    .paper>*:nth-child(1) {
         -ms-grid-row: 1;
         -ms-grid-column: 1;
     }
-    .paper > *:nth-child(2) {
+    .paper>*:nth-child(2) {
         -ms-grid-row: 1;
         -ms-grid-column: 3;
     }
-    .paper > *:nth-child(3) {
+    .paper>*:nth-child(3) {
         -ms-grid-row: 3;
         -ms-grid-column: 1;
     }
-    .paper > *:nth-child(4) {
+    .paper>*:nth-child(4) {
         -ms-grid-row: 3;
         -ms-grid-column: 3;
     }
@@ -203,7 +223,8 @@ blockquote .output {
 
 .menu button:hover, .menu button:focus {
     cursor: pointer;
-    background-color: var(--mars-red);
+    /* background-color: var(--mars-red); */
+    opacity: 0.6;
 }
 
 .page {
@@ -218,7 +239,7 @@ blockquote .output {
     .page {
         padding: 3em;
         -ms-grid-row: 1;
-            grid-row-start: 1;
+        grid-row-start: 1;
         -ms-grid-row-span: 2;
         grid-row-end: 3;
     }
@@ -274,14 +295,14 @@ li {
     margin-bottom: 0.5em;
 }
 
-ol >li {
+ol>li {
     counter-increment: custom-counter;
 }
 
-ol >li::before {
+ol>li::before {
     content: counter(custom-counter) ". ";
     font-weight: bold;
-    color: var(--light-grey);
+    /* color: var(--light-grey); */
 }
 
 .footer {
