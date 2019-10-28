@@ -40,9 +40,6 @@ let passages = {
             ]
         },
         {
-            "choices": []
-        },
-        {
             "choices": [
                 "A photo of the Lunokhod 1 rover shows how it was equipped with some basic scientific instruments, including two cameras and a little instrumentation known as a \"microscope\".",
                 "In the fall of 1973, the Lunokhod 1 finally crossed its intended course, and to this day only 2 of the rovers have ever remained."
@@ -312,14 +309,13 @@ for (let i = 0; i < elements.length; i++) {
 let presetButtons = document.querySelectorAll("button")
 
 let presets = {
-    "0": Array(40).fill(0),
+    "0": Array(39).fill(0),
     "1": [
         2,
         1,
         3,
         2,
         2,
-        -1,
         1,
         2,
         2,
