@@ -153,6 +153,14 @@ blockquote .output {
     grid-template-rows: auto 1fr;
 }
 
+.paper p:not(.not-body) {
+    text-indent: 3.14em;
+}
+
+.paper p:not(.not-body)>* {
+    text-indent: 0;
+}
+
 @media (min-width: 768px) {
     .paper {
         display: -ms-grid;
@@ -237,7 +245,7 @@ blockquote .output {
 
 @media (min-width: 768px) {
     .page {
-        padding: 3em;
+        padding: 3em 5em;
         -ms-grid-row: 1;
         grid-row-start: 1;
         -ms-grid-row-span: 2;
