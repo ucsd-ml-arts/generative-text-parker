@@ -36,7 +36,7 @@ html, body {
 
 .header {
     background-color: var(--slate-grey);
-    background-image: url(nicolas-lobos.jpg);
+    background-image: url(./images/nicolas-lobos.jpg);
     background-image: url("https://images.unsplash.com/photo-1571769267292-e24dfadebbdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1967&q=80");
     background-size: cover;
     background-position: bottom center;
