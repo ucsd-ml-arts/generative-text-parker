@@ -1,6 +1,10 @@
 # [[aiArt](https://github.com/parkeraddison?utf8=%E2%9C%93&tab=repositories&q=aiArt)] Verbosified Space Rovers
 ### *Or: Convincing GPT-2 that more is more*
 
+<p align="center">
+<img src="./images/example.gif">
+</p>
+
 ### Website: [lost-in-deep.space](https://lost-in-deep.space)
 
 ### Table of Contents:
@@ -141,6 +145,7 @@ https://github.com/openai/gpt-2
 
 ## Acknowledgements:
 
-The entire process of generating and finetuning GPT-2 was made *simple* by the help of Max Woolf's ([@minimaxir](https://github.com/minimaxir)) [*GPT-2-simple*](https://github.com/minimaxir/gpt-2-simple) package.  https://github.com/minimaxir/gpt-2-simple
+This project was originally created as a student in [ECE 188: Machine Learning for the Arts](https://roberttwomey.github.io/ucsd-ml-art/) at UC San Diego with the support and tutelage of **Dr. Robert Twomey**.  https://roberttwomey.github.io/ucsd-ml-art/
 
-This project was originally created as a student in [ECE 188: Machine Learning for the Arts](https://roberttwomey.github.io/ucsd-ml-art/) at UC San Diego with the support and tutelage of Dr. Robert Twomey.  https://roberttwomey.github.io/ucsd-ml-art/
+The entire process of generating and finetuning GPT-2 was made *simple* by the help of **\Max Woolf**'s ([@minimaxir](https://github.com/minimaxir)) [*GPT-2-simple*](https://github.com/minimaxir/gpt-2-simple) package.  https://github.com/minimaxir/gpt-2-simple
+

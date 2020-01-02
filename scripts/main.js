@@ -4,6 +4,12 @@ let passages = {
     "generations": [
         {
             "choices": [
+                "like this",
+                "or this",
+            ]
+        },
+        {
+            "choices": [
                 "This is the reason why rovers are such an ideal way to gather scientific data from Earth’s lunar surface and beyond.",
                 "The Soviets have used rovers to gather scientific data about celestial bodies and they have been agreed upon as one of the best ways to gather scientific data about celestial bodies outside of our own Earth.  It is not only a matter of a few people, but of a whole community of people who have been working together to make the world a better place.  And it is not only the Soviets, but all of mankind who have been working together to make the world a better place.",
                 "But unlike a human, rovers are not capable of returning to Earth.  They can't leave Earth because they will be killed by their own human companions, and they cannot be taken to another planet because they are not prepared to leave their home.  Rovers are not capable of returning to Earth because they can't leave Earth by themselves.  They are not capable of leaving Earth because they wouldn’t like to.  Rovers do not want to go to another planet."
