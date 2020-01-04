@@ -122,7 +122,7 @@ Different generation parameters were tried with the following findings:
 ## References:
 [1]: #references
 [2]: #references
-[2]: #references
+[3]: #references
 
 ### Reader References
 1. See this article for the difference between Supervised, Unsupervised, and Semi-supervised learning:  
